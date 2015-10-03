@@ -43,13 +43,23 @@ Download the sample R script and run in R-Studio on your laptop.
 ### Optimize your business process using R 
 Using lpsolve R package: https://cran.r-project.org/web/packages/lpSolve/index.html
 
-####Use Case #1 (taken from http://lpsolve.sourceforge.net/5.5/ )
+#####Use Case #1 (taken from http://lpsolve.sourceforge.net/5.5/ )
 
 Suppose a farmer has 75 acres on which to plant two crops: wheat and barley. To produce these crops, it costs the farmer (for seed, fertilizer, etc.) $120 per acre for the wheat and  $210 per acre for the barley. The farmer has $15000 available for expenses. But after the harvest, the farmer must store the crops while awaiting favorable market conditions. The farmer has storage space for 4000 bushels. Each acre yields an average of 110 bushels of wheat or 30 bushels of barley.  If the net profit per bushel of wheat (after all expenses have been subtracted) is $1.30 and for barley is $2.00, how should the farmer plant the 75 acres to maximize profit?
 
+##### Use Case #2 (taken from http://www.r-bloggers.com/linear-programming-in-r-an-lpsolveapi-example/)
+A trading company is looking for a way to maximize profit per transportation of their goods. The company has a train available with 3 wagons. When stocking the wagons they can choose between 4 types of cargo, each with its own specifications. How much of each cargo type should be loaded on which wagon in order to maximize profit?
+
+Here is the mathematical model:
+P = (110)(1.30)x + (30)(2.00)y = 143x + 60y
+
+120x + 210y <= 15000
+110x + 30y <= 4000
+x + y <= 75
+x >= 0, y >= 0
+
+Download the R script that implements the lpsolve package to solve the above problem. 
+
 ### Analyze very large data sets using sparkR
- - Interactive analysis in R is usually limited as runtime is single threaded  and can only process data sets that fits into client’s memory
-- sparkR provides front-end to spark so R execution can use spark’s distributed model and run large scale data analysis from R console or R-studio
-
-
+ - Interactive analysis in R is usually limited as runtime is single threaded  and can only process data sets that fits into client’s memory. sparkR provides front-end to spark so R execution can use spark’s distributed model and run large scale data analysis from R console or R-studio
  
