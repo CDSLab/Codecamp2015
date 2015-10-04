@@ -1,6 +1,8 @@
 # Codecamp2015
 Silicon valley codecamp at evergreen valley college https://www.siliconvalley-codecamp.com/
 ## Data Scientist tutorial
+### Download the Codecamp presentation here: https://github.com/CDSLab/Codecamp2015/files/7320/codecamp.pdf
+
 ### Analyze data produced by social media applications (Rfacebook)
 Before you can use Rfacebook package to analyze data, you need to follow the steps below:
  - signup at https://developers.facebook.com
